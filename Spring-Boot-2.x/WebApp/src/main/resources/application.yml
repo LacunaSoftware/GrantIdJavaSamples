@@ -1,0 +1,19 @@
+server:
+    port: 8091
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration: 
+          grant-id: 
+            client-id: code-mvc-sample
+            client-secret: RYeohy2aoKyTBEWsH3rIpnhoUM+qhiRqEqLl8XkCAik=
+            client-authentication-method: post
+            authorization-grant-type: authorization_code
+            scope: 
+              - openid
+              - profile
+        provider:
+          grant-id:
+            issuer-uri: https://lacuna-dev.grantid.com

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{fragments/main_layout}">
+<head>
+    <title>Home Page - Code_MVC_Spring</title>
+</head>
+<body>
+    <div layout:fragment="content" class="container text-center">
+        <h1 class="display-4">This is a protected page</h1>
+
+        <tr th:each="claim: ${claims}">
+            <h4><dt th:text="${claim.key}" /></h1><dd th:text="${claim.value}"/>
+        </tr>
+
+        <h4><dt>Identity token</dt></h4>
+
+        <h6><dd th:text="${id_token}"/></h6>
+
+        <h4><dt>Access token</dt></h4>
+
+        <h6><dd th:text="${access_token}"/></h6>
+    </div>
+</body>
+</html>
