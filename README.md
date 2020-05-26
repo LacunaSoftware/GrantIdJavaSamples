@@ -2,7 +2,7 @@
 
 This repository contains demonstrations of use of Lacuna Software's [GrantId](https://grantid.com/) along Java language and web frameworks.
 
-## To get started, choose a java web framework:
+## To get started, choose a Java Web Framework:
 
 - [Spring Boot 1.x](https://github.com/LacunaSoftware/GrantIdJavaSamples/tree/master/Spring-Boot-1.x)
 - [Spring Boot 2.x](https://github.com/LacunaSoftware/GrantIdJavaSamples/tree/master/Spring-Boot-2.x)
