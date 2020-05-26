@@ -1,4 +1,4 @@
-# Spring-Boot-2.x WebApp Sample
+# Spring-Boot-1.x WebApp Sample
 
     This samples uses Spring Boot 1.5.7.RELEASE.
 
