@@ -6,7 +6,7 @@
 
 Run the following command inside the project directory.
 
-    ./mvnw spring-boot:run
+    ./mvnw org.springframework.boot:spring-boot-maven-plugin:run
 
 # The application
 
