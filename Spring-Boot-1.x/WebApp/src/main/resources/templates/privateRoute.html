@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="fragments/main_layout">
+<head>
+    <title>Home Page - Code_MVC_Spring Deprecated</title>
+</head>
+<body>
+<div layout:fragment="content" class="container text-center">
+    <h1>This is a secured page</h1>
+
+    <tr th:each="claim: ${claims}">
+        <h4><dt th:text="${claim.key}" /></h4>
+
+        <dd th:text="${claim.value}" />
+    </tr>
+
+    <dt><h4>Access token</h4></dt>
+
+    <dd th:text="${access_token}" />
+    
+    <dt><h4>Identity token</h4></dt>
+
+    <dd th:text="${id_token}" />
+</div>
+</body>
+</html>

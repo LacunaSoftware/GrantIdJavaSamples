@@ -1,0 +1,17 @@
+server:
+    port: 8091
+
+security:
+  oauth2:
+    client:
+      clientId: code-mvc-sample
+      clientSecret: RYeohy2aoKyTBEWsH3rIpnhoUM+qhiRqEqLl8XkCAik=
+      accessTokenUri: https://lacuna-dev.grantid.com/connect/token
+      userAuthorizationUri: https://lacuna-dev.grantid.com/connect/authorize
+      clientAuthenticationScheme: form
+      scope:
+        - openid
+        - profile
+        - sample-api
+    resource:
+      user-info-uri: https://lacuna-dev.grantid.com/connect/userinfo
