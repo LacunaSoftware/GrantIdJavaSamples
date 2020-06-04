@@ -2,6 +2,39 @@
 
     This samples uses Spring Boot 1.5.7 RELEASE.
 
+# Files
+    
+    +---src
+        +---main
+            +---java
+            ¦   +---lacuna
+            ¦       +---sample
+            ¦           +---api
+            ¦                   Application.java               - Spring Boot main
+            ¦                   BaseController.java            - Rest Controller that holds common method for controllers.
+            ¦                   JwtAuthentication.java         - Authentication wrapper to make the code semantic clear.
+            ¦                   JwtRequestFilter.java          - Authentication filter.
+            ¦                   JwtUtil.java                   - Jwt parsing methods
+            ¦                   Principal.java                 - Principal object wrapper to make the code semantic clear
+            ¦                   ResourceController.java        - Rest controller that requires authentication.
+            ¦                   SecurityConfigurer.java        - Security configurer used to add the jwt filter.
+            ¦                   TokenValidationService.java    - token validation service.
+            ¦                   
+            +---resources                                      - Constant values and configurations.
+                    application.properties
+                    application.yml
+              
+       
+# Customizing GrantId's Credentials
+
+Replace the following properties in `application.properties` with your credentials:
+
+```yml
+    grantid.issuer: https://<your_subscription>.grantid.com
+    grantid.jwks-uri: https://<your_subscription>.grantid.com/.well-known/openid-configuration/jwks
+    grantid.api-scope: <your_api_scope>
+```
+
 # Running
 
 Run the following command inside the project directory.
