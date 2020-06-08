@@ -15,7 +15,6 @@ import com.auth0.jwt.algorithms.Algorithm;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.env.Environment;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
@@ -24,9 +23,6 @@ import io.jsonwebtoken.Claims;
 
 @Component
 public class TokenValidationService {
-
-    @Autowired
-    private Environment env;
 
     @Autowired
     private JwtUtil jwtUtil;
@@ -41,7 +37,7 @@ public class TokenValidationService {
 
     @PostConstruct
     public void postContruct() throws MalformedURLException {
-        URL url = new URL(env.getProperty("grantid.jwks-uri"));
+        URL url = new URL(issuer + "/.well-known/openid-configuration/jwks");
         jwkProvider = new JwkProviderBuilder(url).build();
     }
 

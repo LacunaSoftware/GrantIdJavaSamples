@@ -31,7 +31,6 @@ Replace the following properties in `application.properties` with your credentia
 
 ```yml
     grantid.issuer: https://<your_subscription>.grantid.com
-    grantid.jwks-uri: https://<your_subscription>.grantid.com/.well-known/openid-configuration/jwks
     grantid.api-scope: <your_api_scope>
 ```
 
